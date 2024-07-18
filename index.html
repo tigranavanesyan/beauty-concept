@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <svg style="display: none;">
+            <symbol id="arrow-down" width="8.000000" height="8.000000" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g clip-path="url(#clip1_277)">
+                    <path id="Vector" d="M4 5.66C3.89 5.66 3.78 5.62 3.7 5.54L1.12 3.03C0.95 2.87 0.95 2.61 1.12 2.45C1.28 2.29 1.55 2.29 1.71 2.45L4 4.67L6.28 2.45C6.44 2.29 6.71 2.29 6.87 2.45C7.04 2.61 7.04 2.87 6.87 3.03L4.29 5.54C4.21 5.62 4.1 5.66 4 5.66Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                </g>
+            </symbol>
+            <symbol id="phone" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g clip-path="url(#clip1_284)">
+                    <rect id="Rectangle 4016" x="6.000000" y="3.000000" rx="2.000000" width="12.000000" height="18.000000" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.200000"/>
+                    <path id="Vector 130" d="M10.2 3L10.2 3L7.8 3L7.8 3Q7.8 3.43 7.8 3.6Q7.82 3.94 7.89 4.19Q7.98 4.54 8.16 4.85Q8.33 5.15 8.59 5.4Q8.84 5.66 9.14 5.83Q9.45 6.01 9.8 6.1Q10.05 6.17 10.39 6.19Q10.56 6.2 11 6.2L13 6.2Q13.43 6.2 13.6 6.19Q13.94 6.17 14.19 6.1Q14.54 6.01 14.85 5.83Q15.15 5.66 15.4 5.4Q15.66 5.15 15.83 4.85Q16.01 4.54 16.1 4.19Q16.17 3.94 16.19 3.6Q16.2 3.43 16.2 3L13.8 3Q13.8 3.53 13.78 3.57Q13.77 3.61 13.76 3.65Q13.74 3.68 13.71 3.71Q13.68 3.74 13.65 3.75Q13.61 3.77 13.57 3.78Q13.53 3.79 13 3.79L11 3.79Q10.46 3.79 10.42 3.78Q10.38 3.77 10.34 3.75Q10.31 3.74 10.28 3.71Q10.25 3.68 10.24 3.65Q10.22 3.61 10.21 3.57Q10.2 3.53 10.2 3Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    <circle id="Ellipse 126" cx="12.000000" cy="18.000000" r="1.000000" fill="#FFFFFF" fill-opacity="1.000000"/>
+                </g>
+            </symbol>
+            <symbol id="search-icon" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <circle id="Ellipse 65" cx="11.000000" cy="11.000000" r="6.000000" stroke="#010114" stroke-opacity="1.000000" stroke-width="1.200000"/>
+                <path id="Vector 109" d="M20 20L17 17" stroke="#010114" stroke-opacity="1.000000" stroke-width="1.200000" stroke-linecap="round"/>
+            </symbol>
+        </svg>
+    </div>
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item">Needs</li>
+                    <li class="menu-item">Price List</li>
+                    <li class="menu-item">
+                        Treatments
+                        <svg class="arrow-down">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                    </li>
+                    <li class="menu-item">Surgical</li>
+                    <li class="menu-item">Dental</li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <img src="./assets/img/logo.png" alt="">
+            </div>
+            <div class="contacts">
+                <svg class="phone">
+                    <use xlink:href="#phone"></use>
+                </svg>
+                <a href="tel:+37444007171" class="tell">
+                    +374 44 007171
+                </a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="search-row ">
+            <div class="container">
+                <span>Choose Your Appointment</span>
+                <div class="input-wrapper">
+                    <svg class="search-icon">
+                        <use xlink:href="#search-icon"></use>
+                    </svg>
+                    <input class="search" type="text" placeholder="Search...">
+                </div>
+            </div>
+
+        </div>
+        <div class="categories-wrapper container">
+            <h3 class="text">Schedule an Appointment</h3>
+            <div class="main-category-block">
+                <ul class="active">
+                    <li class="category-btn"
+                        data-sub="[{'Injection': [{'Dermal Filler Injections': [{'name': 'Face Fillers', 'id': 286}, {'name': 'Filler Dissolving (hyaluronidase)', 'id': 317}, {'name': 'Body Fillers', 'id': 58}]}, {'Botulinum Toxin': [{'name': 'Botox for face', 'id': 241}, {'name': 'Sweat Reduction', 'id': 158}]}, {'Mesotherapy Biorevitalization': [{'name': 'Mesotherapy', 'id': 246}, {'name': 'Mesobotox', 'id': 244}, {'name': 'Cherry Lips', 'id': 323}, {'name': 'Skinboosters', 'id': 245}]}, {'PRP': [{'name': 'Hair PRP', 'id': 367}, {'name': 'Face &amp; Neck PRP', 'id': 368}]}, {'name': 'Fat Burner injection: Lipolysis (lemonbottle, aqualyx)', 'id': 124}]}, {'Devices': [{'name': 'Genius RF Microneedling', 'id': 373}, {'name': 'Hollywood Spectra', 'id': 329}, {'name': 'Sofwave', 'id': 6}]}, {'Skin treatment (Acne pigmentation stretchmarks)': [{'name': 'Acne', 'id': 185}, {'name': 'Pigmentation treatment', 'id': 371}, {'name': 'Cellulite', 'id': 175}, {'name': 'Tattoo removal', 'id': 140}, {'name': 'Stretch marks removal', 'id': 141}]}, {'name': 'IV Drips', 'id': 18}, {'name': 'Aesthetic Doctor Consultation', 'id': 365}]"
+                        data-name="Aesthetic &amp; Anti-aging">Aesthetic &amp; Anti-aging</li>
+                    <li class="category-btn"
+                        data-sub="[{'Laser Hair Removal': [{'name': 'Men', 'id': 336}, {'name': 'Women', 'id': 337}]}, {'Skin treatment': [{'Skin Care &amp; Facial': [{'name': 'Mirapeel Hydrating Facial', 'id': 277}, {'name': 'Dermapen Microneedling', 'id': 369}]}, {'Peeling': [{'name': 'Pigmentation', 'id': 370}, {'name': 'Hollywood (Carbon) Peel', 'id': 208}]}, {'Devices': [{'name': 'Clarity 2', 'id': 372}, {'name': 'Hollywood Spectra', 'id': 374}, {'name': 'Sofwave', 'id': 375}, {'name': 'Genius RF Microneedling', 'id': 7}]}]}, {'PRP': [{'name': 'PRP Face &amp; Neck', 'id': 326}, {'name': 'PRP Hair', 'id': 67}]}, {'name': 'Hardware Cosmetology Consultation', 'id': 366}]"
+                        data-name="Hardware Cosmetology">Hardware Cosmetology</li>
+                    <li class="category-btn"
+                        data-sub="[{'Facial Surgery Consultations': [{'name': 'Face Lift', 'id': 191}, {'name': 'Eyelid and Peri-Orbital Surgery', 'id': 347}, {'name': 'Nose Surgery (Rhinoplasty)', 'id': 224}, {'name': 'Ear surgery (Otoplasty)', 'id': 216}]}, {'Body Surgery Consultation': [{'name': 'MIA procedure for Breast', 'id': 255}, {'name': 'Body Contouring Consultation', 'id': 350}, {'name': 'Liposuction', 'id': 35}, {'name': 'Mommy Makeover Consultation', 'id': 237}, {'name': 'Breast Surgery Consultation', 'id': 234}]}, {'Skin - Dermatology Surgery': [{'name': 'Lipoma Surgery', 'id': 355}, {'name': 'Cyst Removal', 'id': 164}, {'name': 'Mole Removal', 'id': 165}]}, {'name': 'Post-Op Consultation', 'id': 345}]"
+                        data-name="Plastic Surgery">Plastic Surgery</li>
+                    <li class="category-btn"
+                        data-sub="[{'Aesthetic Dental treatments': [{'name': 'Aligners', 'id': 360}, {'name': 'Whitening', 'id': 359}, {'name': 'Veneers', 'id': 361}, {'name': 'Cleansing &amp; polishing', 'id': 358}]}, {'name': 'CBCT Scan (Cone Beam CT)', 'id': 309}, {'name': 'Dental Consultation', 'id': 356}, {'name': 'Holistic Dentistry Consutlation', 'id': 357}]"
+                        data-name="Dental">Dental</li>
+                    <li class="category-btn" data-sub="[{'name': 'Doctor Consultation', 'id': 64}]"
+                        data-name="Hair Transplant">Hair Transplant</li>
+                </ul>
+                <div class="img"></div>
+                <!-- <div id="category-image">
+                    <img src="" loading="lazy" style=""/>
+                </div> -->
+             </div>
+
+        </div>
+    </main>
+    
+</body>
+</html>
