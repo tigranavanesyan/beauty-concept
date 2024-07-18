@@ -191,3 +191,26 @@ ul.active:has(.activeBtn) li:not(.activeBtn){
 .active .activeBtn::after{
     display: none;
 }
+
+
+
+
+@media (max-width: 800px){
+    .main-category-block .img{
+        display: none;
+    }
+    .main-category-block ul{
+        width: 100%;
+        gap: 24px;
+    }
+    .main-category-block>ul>.activeBtn{
+        background-color: black;
+        color: white;
+        padding-right: 0;
+    }
+    .main-category-block>ul>.activeBtn>ul{
+        background-color: gray;
+        color: black;
+        padding-right: 0;
+    }
+}

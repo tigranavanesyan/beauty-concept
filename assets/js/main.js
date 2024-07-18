@@ -7,7 +7,7 @@ categoryBtns.forEach((el)=>{
     el.addEventListener('click',listener)
 })
 
-function clickOnBtn(data){
+function clickOnBtn(data,el){
     const newUl = document.createElement('ul');
     newUl.classList.add('active')
     newUl.dataset.nestedLevel = nestedLevel.toString()
@@ -21,7 +21,11 @@ function clickOnBtn(data){
             createLi( name1,newUl,item[name1])
         }
     })
-    mainCategoryBlock.appendChild(newUl)
+    if(!window.matchMedia("(max-width: 800px)").matches){
+        mainCategoryBlock.appendChild(newUl)
+    } else {
+        el.appendChild(newUl)
+    }
 }
 
 
@@ -36,8 +40,14 @@ function createLi(text,locationElement,sub){
         newLi.addEventListener('click',listener)
     } else {
         newLi.addEventListener('click',(e)=>{
-            changeActiveBtn(e)
-            ulActivePrev(e)
+            if(!window.matchMedia("(max-width: 800px)").matches){
+
+                changeActiveBtn(e)
+                ulActivePrev(e)
+            } else {
+                console.log('www')
+            }
+
         })
 
     }
@@ -52,13 +62,12 @@ function dataAttrToObj(elem){
 
 function listener(elem){
     const targetElement = elem.target.closest('.category-btn');
-    if (elem.target.classList.contains("activeBtn") && 1){
-        console.log('kkk')
+    if (elem.target.classList.contains("activeBtn")){
         ulActivePrev(elem)
         // return
     }
     const categoryUl = document.querySelector('.main-category-block ul.active')
-    categoryUl.classList.remove('active')
+    categoryUl?.classList.remove('active')
 
     const categoryLi = document.querySelectorAll('.main-category-block ul li')
     categoryLi[categoryLi.length-1].classList.remove('activeBtn')
@@ -66,10 +75,10 @@ function listener(elem){
     changeActiveBtn(elem)
 
 
-    if (targetElement) {
+    if (targetElement.dataset.sub) {
         const data = dataAttrToObj(targetElement);
         checkNestedLevel(elem)
-        clickOnBtn(data)
+        clickOnBtn(data,targetElement)
     }
 }
 
