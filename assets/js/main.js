@@ -39,17 +39,13 @@ function createLi(text,locationElement,sub){
         newLi.dataset.sub = JSON.stringify(sub)
         newLi.addEventListener('click',listener)
     } else {
+        newLi.classList.add('arrow-hidden')
         newLi.addEventListener('click',(e)=>{
             if(!window.matchMedia("(max-width: 800px)").matches){
-
                 changeActiveBtn(e)
                 ulActivePrev(e)
-            } else {
-                console.log('www')
             }
-
         })
-
     }
     locationElement.appendChild(newLi)
 }
@@ -112,3 +108,12 @@ function ulActivePrev(e){
         nestedLevel--
     }
 }
+
+
+let windowSizePrev = window.innerWidth
+window.addEventListener("resize", ()=>{
+    if ((windowSizePrev < 800 && window.innerWidth >= 800) || (windowSizePrev > 800 && window.innerWidth <= 800)){
+        location.reload();
+    }
+    windowSizePrev = window.innerWidth
+});
